@@ -74,7 +74,7 @@
       edge(
         (4, 4),
         (4, 4),
-        [$F(id_e) = id_(F(c))$],
+        [$F(id_e) = id_(F(e))$],
         label-side: left,
         "->",
         bend: 140deg,
@@ -128,5 +128,17 @@
     edge((0, 0), (0, 2), [$F(f)$], label-side: right, "->")
     edge((2, 0), (2, 2), [$G(f)$], label-side: left, "->")
   }))
+]
+
+#slide[
+  #text(0.8em)[
+    青色の円を関手、紫色の矢印を自然変換というイメージを持つと理解しやすい。\
+    (詳細は、関手圏のセクションで説明する。)
+  ]
+  #align(center, utils.fit-to-height(1fr)[
+    #figure(
+      image("../natural-transformation.png", height: 100%),
+    )
+  ])
 ]
 
