@@ -137,7 +137,7 @@
   ]
   #align(center, utils.fit-to-height(1fr)[
     #figure(
-      image("../natural-transformation.png", height: 100%),
+      image("../assets/natural-transformation.png", height: 100%),
     )
   ])
 ]

@@ -79,7 +79,7 @@
 
   #align(center, utils.fit-to-height(1fr)[
     #figure(
-      image("../graph-c.png", height: 100%),
+      image("../assets/graph-c.png", height: 100%),
     )
   ])
 ]
@@ -89,7 +89,7 @@
 
   #align(center, utils.fit-to-height(1fr)[
     #figure(
-      image("../graph-d.png", height: 100%),
+      image("../assets/graph-d.png", height: 100%),
     )
   ])
 ]

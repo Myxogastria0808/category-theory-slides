@@ -148,7 +148,7 @@ $G$上の自由圏$cal("Free")(G)$を定義する。\
 
   #align(center, utils.fit-to-height(1fr)[
     #figure(
-      image("../functor.png", height: 100%),
+      image("../assets/functor.png", height: 100%),
     )
   ])
 ]
@@ -165,7 +165,7 @@ $G$上の自由圏$cal("Free")(G)$を定義する。\
 #slide[
   #align(center, utils.fit-to-height(1fr)[
     #figure(
-      image("../functor-category.png", height: 100%),
+      image("../assets/functor-category.png", height: 100%),
     )
   ])
 ]
