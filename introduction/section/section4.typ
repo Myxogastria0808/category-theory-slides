@@ -24,7 +24,10 @@
   #table(
     columns: 4,
     stroke: gray,
-    [id (primary key)], [manager], [dept (foreign key)], [description],
+    [id (primary key)],
+    [manager  (primary keyを内部参照)],
+    [dept (foreign key)],
+    [description],
   )
 
   `Department`テーブル
@@ -45,7 +48,7 @@
     columns: 4,
     stroke: gray,
     [id (primary key)],
-    [supervisor],
+    [supervisor  (primary keyを内部参照)],
     [team (foreign key)],
     [profile (foreign key)],
   )

@@ -152,49 +152,55 @@
   - $I("Department"."note") = {d_1 mapsto \""EngineeringTeam"\", d_2 mapsto \""AccountantTeam"\"}$ \ (`Department.note` $:=$ Departmentテーブルの`note`)
 ]
 
-////// wip //////////
-// #slide[
-//   スキーマ$C$には、具体的に以下のデータが入っているとする。
-//
-//   `Employee`テーブル
-//   #table(
-//     columns: 4,
-//     stroke: gray,
-//     [id (primary key)],
-//     [manager (primary keyを内部参照)],
-//     [dept (foreign key)],
-//     [description],
-//
-//     [$e_1$], [$e_1$], [$d_1$], [LeadEngineer],
-//     [$e_2$], [$e_1$], [$d_1$], [BackendEngineer],
-//     [$e_3$], [$e_3$], [$d_2$], [Accountant],
-//   )
-//
-//   `Department`テーブル
-//   #table(
-//     columns: 2,
-//     stroke: gray,
-//     [id (primary key)], [note],
-//     [$d_1$], [EngineeringTeam],
-//     [$d_2$], [AccountantTeam],
-//   )
-// ]
-//
-// #slide[
-//   従って、データベース • インスタンス$I$は、以下のように表せる。
-//   - $I("Employee") ={e_1, e_2, e_3}$ \ (`Employee` $:=$ Employeeテーブルの`id`)
-//   - $I("Employee"."mamanger") = {e_1 mapsto e_1, e_2 mapsto e_1, e_3 mapsto e_3}$ \ (`Employee.manager` $:=$ Employeeテーブルの`manager`)
-//   - $I("Employee"."dept") = {e_1 mapsto d_1, e_2 mapsto d_1, e_3 mapsto d_2}$ \ (`Employee.dept` $:=$ Employeeテーブルの`dept`)
-//   - $I ("Employee"."description") = {e_1 mapsto \""LeadEngineer"\", e_2 mapsto \""BackendEngineer"\", e_3 mapsto \""Accountant"\"}$ \ (`Employee.description` $:=$ Employeeテーブルの`description`)
-// ]
-//
-// #slide[
-//   - $I("Department") = {d_1, d_2}$ \ (`Department` $:=$ Departmentテーブルの`id`)
-//   - $I("Department"."note") = {d_1 mapsto \""EngineeringTeam"\", d_2 mapsto \""AccountantTeam"\"}$ \ (`Department.note` $:=$ Departmentテーブルの`note`)
-// ]
+#slide[
+  スキーマ$D$には、具体的に以下のデータが入っているとする。
 
+  `Staff`テーブル
+  #table(
+    columns: 4,
+    stroke: gray,
+    [id (primary key)],
+    [supervisor (primary keyを内部参照)],
+    [team (foreign key)],
+    [profile (foreign key)],
 
-////// wip /////////
+    [$e_1$], [$e_1$], [$d_1$], [$p_1$],
+    [$e_2$], [$e_1$], [$d_1$], [$p_2$],
+    [$e_3$], [$e_3$], [$d_2$], [$p_3$],
+  )
+
+  `Profile`テーブル
+  #table(
+    columns: 2,
+    stroke: gray,
+    [id (primary key)], [bio],
+    [$p_1$], [LeadEngineer],
+    [$p_2$], [BackendEngineer],
+    [$p_3$], [Accountant],
+  )
+
+  `Team`テーブル
+  #table(
+    columns: 2,
+    stroke: gray,
+    [id (primary key)], [memo],
+    [$d_1$], [EngineeringTeam],
+    [$d_2$], [AccountantTeam],
+  )
+]
+
+#slide[
+  従って、データベース • インスタンス$I$は、以下のように表せる。
+  - $I("Employee") ={e_1, e_2, e_3}$ \ (`Employee` $:=$ Employeeテーブルの`id`)
+  - $I("Employee"."mamanger") = {e_1 mapsto e_1, e_2 mapsto e_1, e_3 mapsto e_3}$ \ (`Employee.manager` $:=$ Employeeテーブルの`manager`)
+  - $I("Employee"."dept") = {e_1 mapsto d_1, e_2 mapsto d_1, e_3 mapsto d_2}$ \ (`Employee.dept` $:=$ Employeeテーブルの`dept`)
+  - $I ("Employee"."description") = {e_1 mapsto \""LeadEngineer"\", e_2 mapsto \""BackendEngineer"\", e_3 mapsto \""Accountant"\"}$ \ (`Employee.description` $:=$ Employeeテーブルの`description`)
+]
+
+#slide[
+  - $I("Department") = {d_1, d_2}$ \ (`Department` $:=$ Departmentテーブルの`id`)
+  - $I("Department"."note") = {d_1 mapsto \""EngineeringTeam"\", d_2 mapsto \""AccountantTeam"\"}$ \ (`Department.note` $:=$ Departmentテーブルの`note`)
+]
 
 #slide[
   5. 始域の圏$cal(C)$と終域の圏$cal(D)$を用意し、関手$F : cal(C) -> cal(D)$を用意する。\
