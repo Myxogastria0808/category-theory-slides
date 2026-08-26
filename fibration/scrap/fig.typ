@@ -1,0 +1,27 @@
+#set page(fill: none, width: auto, height: auto, margin: 5pt)
+#import "@preview/fletcher:0.5.7" as fletcher: diagram, edge, node
+
+#align(center, diagram({
+  node((6, 2), [$d$])
+  node((8, 2), [$e$])
+  node((4, 2), [$b$])
+  node((0, 2), [$a$])
+  node((2, 0), [$c$])
+  node((3, 6), [$0$])
+  node((6, 6), [$1$])
+  edge((6, 2), (8, 2), [$g_("de")$], label-side: center, "->")
+  edge((4, 2), (6, 2), [$g_("bd"_1)$], label-side: center, shift: -0.1, "->")
+  edge((4, 2), (6, 2), [$g_("bd"_2)$], label-side: center, shift: 0.1, "->")
+  edge((0, 2), (4, 2), [$g_("ab")$], label-side: center, "->")
+  edge((0, 2), (2, 0), [$g_("ac")$], label-side: center, "->")
+  edge((4, 2), (2, 0), [$g_("bc")$], label-side: center, "->")
+  edge((2, 0), (6, 2), [$g_("cd")$], label-side: center, "->", bend: 36deg)
+  edge((2, 0), (8, 2), [$g_("ce")$], label-side: center, "->", bend: 54deg)
+  edge((0, 2), (3, 6), shift: -0.05, "|->")
+  edge((2, 0), (3, 6), "|->", bend: -20deg)
+  edge((4, 2), (3, 6), "|->")
+  edge((3, 6), (6, 6), [$f$], label-side: center, "->")
+  edge((6, 2), (6, 6), "|->")
+  edge((8, 2), (6, 6), "|->")
+}))
+
