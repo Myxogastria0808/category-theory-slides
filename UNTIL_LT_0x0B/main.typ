@@ -7,4 +7,3 @@
 #include "./sections/toc.typ"
 
 #include "./sections/section1.typ"
-
