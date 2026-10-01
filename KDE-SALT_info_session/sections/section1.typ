@@ -59,7 +59,7 @@
     node((0, 2), [$"PG to PGのマイグレーションを数学的に保証する"$])
     node(
       (0, 2.7),
-      [$"Schema A" models "Constraints of Schema A" arrow.r.long^("Migration") M("Schema A") models M("Constraints of Schema A")$],
+      [$"Schema A" models "Constraints of Schema A" arrow.r.long^("Migration") M("Schema A") models "Constraints of Schema A"$],
     )
     edge((0, 0), (0, 2), [$"圏論を用いた数理モデル化"$], label-side: left, "=>")
   }))
