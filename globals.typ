@@ -98,19 +98,29 @@
       handout: false,
       // use a lighter weight than the theme's default `weight: "bold"`
       new-section-slide-fn: my-new-section-slide,
+      // touying's default recolors `*strong*` text with the primary color;
+      // keep bold text in the normal text color instead
+      show-strong-with-alert: false,
     ),
     // the theme's own per-slide init hard-codes `size: 25pt`, overriding any
     // outer `set text(size: ...)`, so it must be overridden here instead
     config-methods(init: (self: none, body) => {
       set text(size: 20pt)
+      // vertically center each slide's content instead of pinning it to
+      // the top; horizontal stays `left` so list markers/body text don't
+      // get the centered-list-grid disconnect (see memory)
+      set align(left + horizon)
       body
     }),
     // content shown at the top of every slide created by a level 2 heading;
-    // overrides the theme's default `weight: "bold"` with a lighter weight
-    subslide-preamble: block(
+    // overrides the theme's default `weight: "bold"` with a lighter weight.
+    // explicitly pinned to the top (overriding the ambient `horizon` set
+    // above) so only the body below it centers in the remaining space,
+    // instead of the preamble+body group centering together
+    subslide-preamble: align(top + left, block(
       below: 1.5em,
       text(1.2em, weight: "regular", utils.display-current-heading(level: 2)),
-    ),
+    )),
     header: [
       // show current section (level: 1) in the header
       #text(gray, utils.display-current-heading(level: 1))
