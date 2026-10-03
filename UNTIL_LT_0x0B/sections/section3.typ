@@ -6,13 +6,15 @@
 
 #align(center, block[
   #show math.equation.where(block: true): set align(left)
-  #align(left)[$ {1, 2, 3, 4, dots} quad quad NN $]
+  #align(left)[$ {1, 2, 3} quad quad NN $]
   #v(0.2em)
   #align(left)[ある条件を満たすものを全部集めれば、集合を作れる。]
   #v(0.2em)
   #align(left)[$ {x in NN | x "は偶数"} $]
   #v(0.35em)
-  #align(left)[では、自分自身を要素として含まない集合を、すべて集めた集合を考える。]
+  #align(
+    left,
+  )[では、自分自身を要素として含まない集合を、すべて集めた集合を考える。]
 ])
 
 #v(0.2em)

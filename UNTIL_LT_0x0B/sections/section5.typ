@@ -9,7 +9,7 @@
   $ 0 = emptyset $
   $ 1 = {0} = {emptyset} $
   $ 2 = {0, 1} = {emptyset, {emptyset}} $
-  $ 3 = {0, 1, 2} $
+  $ 3 = {0, 1, 2}= {emptyset, {emptyset}, {emptyset, {emptyset}}} $
 
   #v(0.3em)
   #align(center, text(1.1em)[$arrow.b$])
@@ -31,5 +31,7 @@
 ])
 
 #v(1em)
-#align(center)[これが「厳密な数学」として一般に想像される世界にかなり近い。\ 今回「現代数学」と呼びたいのは、こちら側の立場。]
+#align(
+  center,
+)[これが「厳密な数学」として一般に想像される世界にかなり近い。\ 今回「現代数学」と呼びたいのは、こちら側の立場。]
 
